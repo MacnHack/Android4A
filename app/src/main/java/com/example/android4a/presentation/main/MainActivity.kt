@@ -20,18 +20,34 @@ class MainActivity : AppCompatActivity() {
             when(it){
                 is LoginSuccess -> {
                     //TODO Navigation
+                    MaterialAlertDialogBuilder(this)
+                        .setTitle("Success")
+                        .setMessage("Successfully connected")
+                        .setPositiveButton("Ok") {dialog, which -> dialog.dismiss() }
+                        .show()
                 }
                 LoginError -> {
-                MaterialAlertDialogBuilder(this)
-                    .setTitle("Erreur")
-                    .setMessage("Compte inconnu")
-                    .setPositiveButton("Ok") {dialog, which -> dialog.dismiss() }
-                    .show()
-            }
+                    MaterialAlertDialogBuilder(this)
+                        .setTitle("Erreur")
+                        .setMessage("Votre nom de compte ou mot de passe est incorrect. Veuillez vérifier vos identifiants puis réessayez")
+                        .setPositiveButton("Ok") {dialog, which -> dialog.dismiss() }
+                        .show()
+                }
+                SignUpError -> {
+                    MaterialAlertDialogBuilder(this)
+                        .setTitle("Erreur")
+                        .setMessage("Cet identifiant est déjà utilisé")
+                        .setPositiveButton("Ok") {dialog, which -> dialog.dismiss() }
+                        .show()
+                }
             }
         })
         login_button.setOnClickListener {
-            mainViewModel.onClickedIncrement(login_edit.text.toString().trim(), password_edit.text.toString())
+            mainViewModel.onClickedLogin(login_edit.text.toString().trim(), password_edit.text.toString())
+        }
+
+        create_account_button.setOnClickListener {
+            mainViewModel.onClickedSignUp(login_edit.text.toString().trim(), password_edit.text.toString())
         }
     }
 }

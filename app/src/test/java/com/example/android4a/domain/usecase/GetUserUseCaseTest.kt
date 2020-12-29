@@ -20,13 +20,13 @@ class GetUserUseCaseTest{
         runBlocking {
             //GIVEN
             val email = ""
-            coEvery { userRepository.getUser(email) } returns null
+            coEvery { userRepository.getUser(email, password) } returns null
 
             //WHEN
             val result = classUnderTest.invoke(email)
 
             //THEN
-            coVerify(exactly = 1) { userRepository.getUser(email) }
+            coVerify(exactly = 1) { userRepository.getUser(email, password) }
             assertEquals(result, null)
         }
     }
@@ -37,13 +37,13 @@ class GetUserUseCaseTest{
             //GIVEN
             val email = "a@a.c"
             val expectedUser = User("a@a.c")
-            coEvery { userRepository.getUser(email) } returns expectedUser
+            coEvery { userRepository.getUser(email, password) } returns expectedUser
 
             //WHEN
             val result = classUnderTest.invoke(email)
 
             //THEN
-            coVerify(exactly = 1) { userRepository.getUser(email) }
+            coVerify(exactly = 1) { userRepository.getUser(email, password) }
             assertEquals(result, expectedUser)
         }
     }

@@ -18,18 +18,29 @@ class MainViewModel (
     val loginLiveData: MutableLiveData<LoginStatus> = MutableLiveData()
 
 
-    fun onClickedIncrement(emailUser: String, password: String) {
+    fun onClickedLogin(emailUser: String, password: String) {
         viewModelScope.launch(Dispatchers.IO) {
-            val user = getUserUseCase.invoke(emailUser)
-            val loginStatus = if(user != null){
-                LoginSuccess(user.email)
-            }else{
+            val userPass = getUserUseCase.invoke(emailUser)
+            val loginStatus = if (userPass?.password == password) {
+                LoginSuccess(userPass.email)
+            } else {
                 LoginError
             }
-            withContext(Dispatchers.Main){
+            withContext(Dispatchers.Main) {
                 loginLiveData.value = loginStatus
             }
         }
-        //counter.value = (counter.value ?: 0) + 1
+    }
+
+    fun onClickedSignUp(emailUser: String, password: String) {
+        viewModelScope.launch(Dispatchers.IO) {
+            val userOk = getUserUseCase.invoke(emailUser)
+            if (userOk?.email == null) {
+                createUserUseCase.invoke(User(emailUser, password))
+                onClickedLogin(emailUser, password)
+            } else {
+                withContext(Dispatchers.Main){loginLiveData.value = SignUpError}
+            }
+        }
     }
 }
