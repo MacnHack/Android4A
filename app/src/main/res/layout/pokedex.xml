@@ -3,12 +3,20 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.PokedexActivity">
+    tools:context=".presentation.pokedex.PokedexActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimaryVariant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></androidx.appcompat.widget.Toolbar>
 
     <fragment
-        android:name="com.example.android4a.presentation.PokemonList"
+        android:name="com.example.android4a.presentation.pokedex.PokemonList"
         android:id="@+id/list_pokemon_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

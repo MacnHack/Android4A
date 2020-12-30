@@ -1,4 +1,4 @@
-package com.example.android4a.Retrofit
+package com.example.android4a.domain.Retrofit
 
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
