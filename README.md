@@ -38,15 +38,15 @@ On peut aussi séléctionner un pokemon afin de faire apparaître à l'écran de
 
   - Une fois connecté, on obtient une liste de pokemon
 
-<img src="Images/ListePokemon.jpg" alt="listepokemon">
+<img src="Images/ListePokemon.jpg" alt="listepokemon" width="30%" height="30%">
 
   - Si l'on se risque à appuyé sur un pokémon on obtient des informations complémentaires sur ce dernier.
   
-<img src="Images/ivysaur.jpg" alt="ivysaur">
+<img src="Images/ivysaur.jpg" alt="ivysaur" width="30%" height="30%">
   
   - Sur cette page, on peut :
     - Retourner en arrière en appuyant sur la flèche en haut à droite.
     - Allez voir une évolution précédentes (si il en existe) en appuyant sur le nom de l'évolution
     - Ou encore, allez voir une évolution suivantes (toujours si il en existe) en appuyant sur le nom de l'évolution
 
-<img src="Images/bulbasaur.jpg" alt="bulbasaur"><img src="Images/venusaur.jpg" alt="venusaur">
+<img src="Images/bulbasaur.jpg" alt="bulbasaur" width="30%" height="30%"><img src="Images/venusaur.jpg" alt="venusaur" width="30%" height="30%">
