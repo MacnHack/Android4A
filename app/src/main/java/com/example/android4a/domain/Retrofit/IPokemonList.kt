@@ -1,4 +1,4 @@
-package com.example.android4a.Retrofit
+package com.example.android4a.domain.Retrofit
 
 import com.example.android4a.data.local.models.Pokedex
 import io.reactivex.Observable

@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Android4A"
         android:usesCleartextTraffic="true">
-        <activity android:name=".presentation.PokedexActivity"></activity>
+        <activity android:name=".presentation.pokedex.PokedexActivity"></activity>
         <activity android:name=".presentation.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

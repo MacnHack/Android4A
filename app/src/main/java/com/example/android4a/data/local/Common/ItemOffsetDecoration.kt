@@ -1,4 +1,4 @@
-package com.example.android4a.Common
+package com.example.android4a.data.local.Common
 
 import android.content.Context
 import android.graphics.Rect

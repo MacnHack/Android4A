@@ -1,4 +1,4 @@
-package com.example.android4a.presentation
+package com.example.android4a.presentation.pokedex
 
 import  android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,21 +7,20 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.android4a.Adapter.PokemonListAdapter
-import com.example.android4a.Common.Common
-import com.example.android4a.Common.ItemOffsetDecoration
+import com.example.android4a.presentation.Adapter.PokemonListAdapter
+import com.example.android4a.data.local.Common.Common
+import com.example.android4a.data.local.Common.ItemOffsetDecoration
 import com.example.android4a.R
-import com.example.android4a.Retrofit.IPokemonList
-import com.example.android4a.Retrofit.RetrofitClient
+import com.example.android4a.domain.Retrofit.IPokemonList
+import com.example.android4a.domain.Retrofit.RetrofitClient
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.fragment_pokemon_list.*
 
 class PokemonList : Fragment() {
 
     internal var compositeDisposable = CompositeDisposable()
-    internal var iPokemonList:IPokemonList
+    internal var iPokemonList: IPokemonList
 
     internal lateinit var recyclerView: RecyclerView
 
@@ -41,7 +40,11 @@ class PokemonList : Fragment() {
         recyclerView = itemView.findViewById(R.id.pokemon_recyclerview) as RecyclerView
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = GridLayoutManager(activity,2)
-        val itemDecoration = ItemOffsetDecoration(activity!!,R.dimen.spacing)
+        val itemDecoration =
+            ItemOffsetDecoration(
+                activity!!,
+                R.dimen.spacing
+            )
         recyclerView.addItemDecoration(itemDecoration)
 
         fetchData()
@@ -56,7 +59,11 @@ class PokemonList : Fragment() {
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe { pokemonDex ->
                 Common.pokemonList = pokemonDex.pokemon!!
-                val adapter = PokemonListAdapter(activity!!, Common.pokemonList)
+                val adapter =
+                    PokemonListAdapter(
+                        activity!!,
+                        Common.pokemonList
+                    )
 
                 recyclerView.adapter = adapter
             }
