@@ -49,4 +49,4 @@ On peut aussi séléctionner un pokemon afin de faire apparaître à l'écran de
     - Allez voir une évolution précédentes (si il en existe) en appuyant sur le nom de l'évolution
     - Ou encore, allez voir une évolution suivantes (toujours si il en existe) en appuyant sur le nom de l'évolution
 
-<img src="Images/bulbasaur.jpg" alt="bulbasaur" width="30%" height="30%"><img src="Images/venusaur.jpg" alt="venusaur" width="30%" height="30%">
+<img src="Images/bulbasaur.jpg" alt="bulbasaur" width="30%" height="30%"> <img src="Images/venusaur.jpg" alt="venusaur" width="30%" height="30%">
