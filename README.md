@@ -2,9 +2,9 @@
 
 ## Présentation
 
-Projet de programmation mobile de 4A, c'est une application android codé en Kotlin.
-Elle permet grâce à une API d'affiché différent Pokemon.
-On peut aussi séléctionner un pokemon afin de faire apparaître à l'écran des informations le concernant
+Ce projet de programmation mobile de 4A est une application Android codé en Kotlin.
+Elle permet, grâce à une API d'afficher différents Pokemon.
+On peut aussi séléctionner un Pokemon afin de faire apparaître à l'écran des informations le concernant
 
 ## Consigne minimale :
 
@@ -19,16 +19,16 @@ On peut aussi séléctionner un pokemon afin de faire apparaître à l'écran de
 ## Ajout :
 
   - Affichage du détail des éléments de la liste
-  - Mode Sombre (sauf affichage des informations du pokemon)
+  - Mode Sombre (sauf affichage des informations du Pokemon)
   - Gitflow rudimentaire
 
 ## L'application :
 
 ### Premier écran
 
-  - Ecran de connexion, il est possible de créer un compte ou de se connecter si on en possède déjà un.
-    - Si, lors de la connexion, la combinaison Login/Password on obtient une erreur
-    - Si, lors de la création de compte, le login est déjà utilisé on obtient une erreur
+  - Ecran de connexion : il est possible de créer un compte ou de se connecter si on en possède déjà un.
+    - Si, lors de la connexion, la combinaison Login/Password n'existe pas, on obtient une erreur.
+    - Si, lors de la création de compte, le login est déjà utilisé, on obtient une erreur.
 
 <img src="Images/LoginPage.jpg" alt="loginpage" width="30%" height="30%">
 
@@ -36,17 +36,17 @@ On peut aussi séléctionner un pokemon afin de faire apparaître à l'écran de
 
 ### Second écran
 
-  - Une fois connecté, on obtient une liste de pokemon
+  - Une fois connecté, on obtient une liste de Pokemon :
 
 <img src="Images/ListePokemon.jpg" alt="listepokemon" width="30%" height="30%">
 
-  - Si l'on se risque à appuyé sur un pokémon on obtient des informations complémentaires sur ce dernier.
+  - Si l'on se risque (soyons fou) à appuyer sur un Pokémon on obtient des informations complémentaires sur ce dernier :
   
 <img src="Images/ivysaur.jpg" alt="ivysaur" width="30%" height="30%">
   
   - Sur cette page, on peut :
     - Retourner en arrière en appuyant sur la flèche en haut à droite.
-    - Allez voir une évolution précédentes (si il en existe) en appuyant sur le nom de l'évolution
-    - Ou encore, allez voir une évolution suivantes (toujours si il en existe) en appuyant sur le nom de l'évolution
+    - Allez voir une évolution précédente (si il en existe) en appuyant sur le nom de l'évolution.
+    - Ou encore, allez voir une évolution suivante (toujours si il en existe) en appuyant sur le nom de l'évolution.
 
 <img src="Images/bulbasaur.jpg" alt="bulbasaur" width="30%" height="30%"> <img src="Images/venusaur.jpg" alt="venusaur" width="30%" height="30%">
