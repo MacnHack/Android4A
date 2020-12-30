@@ -1,9 +1,11 @@
 package com.example.android4a.presentation.main
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.Observer
 import com.example.android4a.R
+import com.example.android4a.presentation.PokedexActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.android.ext.android.inject
@@ -19,12 +21,8 @@ class MainActivity : AppCompatActivity() {
         mainViewModel.loginLiveData.observe(this, Observer {
             when(it){
                 is LoginSuccess -> {
-                    //TODO Navigation
-                    MaterialAlertDialogBuilder(this)
-                        .setTitle("Success")
-                        .setMessage("Successfully connected")
-                        .setPositiveButton("Ok") {dialog, which -> dialog.dismiss() }
-                        .show()
+                    val intent = Intent(this, PokedexActivity::class.java)
+                    startActivity(intent)
                 }
                 LoginError -> {
                     MaterialAlertDialogBuilder(this)
@@ -49,5 +47,10 @@ class MainActivity : AppCompatActivity() {
         create_account_button.setOnClickListener {
             mainViewModel.onClickedSignUp(login_edit.text.toString().trim(), password_edit.text.toString())
         }
+
+        /*
+        toolbar.setTitle("POKEDEX")
+        setSupportActionBar(toolbar)
+         */
     }
 }
