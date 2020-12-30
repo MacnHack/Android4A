@@ -35,7 +35,7 @@ class PokemonTypeAdapter(internal var context: Context, internal var typeList:Li
 
         init {
             chip = itemView.findViewById(R.id.chip) as Chip
-            chip.setOnClickListener { Toast.makeText(context, "Clicked", Toast.LENGTH_SHORT).show() }
+            chip.setOnClickListener { Toast.makeText(context, "Oui, c'est bien le type " + chip.text, Toast.LENGTH_SHORT).show() }
         }
     }
 }
