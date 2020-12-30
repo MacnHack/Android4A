@@ -30,7 +30,7 @@ On peut aussi séléctionner un pokemon afin de faire apparaître à l'écran de
     - Si, lors de la connexion, la combinaison Login/Password on obtient une erreur
     - Si, lors de la création de compte, le login est déjà utilisé on obtient une erreur
 
-<img src="Images/LoginPage.jpg" alt="loginpage">
+<img src="Images/LoginPage.jpg" alt="loginpage" width="50%" height="50%">
 
 
 
