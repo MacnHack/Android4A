@@ -3,8 +3,8 @@
 ## Présentation
 
 Ce projet de programmation mobile de 4A est une application Android codé en Kotlin.
-Elle permet, grâce à une API d'afficher différents Pokemon.
-On peut aussi séléctionner un Pokemon afin de faire apparaître à l'écran des informations le concernant
+Elle permet, grâce à une API, d'afficher différents Pokemon.
+On peut aussi sélectionner un Pokemon afin de faire apparaître à l'écran des informations le concernant
 
 ## Consigne minimale :
 
